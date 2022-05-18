@@ -10,6 +10,13 @@ import kr.nepp.viewpager_20220518.fragments.PhoneNumFragment
 class MainViewPagerAdapter(fm: FragmentManager) : FragmentPagerAdapter(fm)
 {
 
+    override fun getPageTitle(position: Int): CharSequence? {
+        return when (position) {
+            0 -> "이름"
+            1 -> "연락처"
+            else -> "인사말"
+        }
+    }
 //    몇 장짜리 뷰페이저인지 정수를 리턴
     override fun getCount() = 3
 
